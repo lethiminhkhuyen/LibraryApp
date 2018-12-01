@@ -1,2 +1,2 @@
 # firstGit
-gitTut
+gitTut :sparkles:
