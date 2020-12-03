@@ -1,2 +1,1 @@
-# firstGit
-gitTut :sparkles:
+# C# Project
