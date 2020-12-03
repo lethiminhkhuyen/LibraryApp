@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67FE467B-B860-4C5D-B567-5A9461021ACD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryApp</RootNamespace>
+    <AssemblyName>LibraryApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBookForm.Designer.cs">
+      <DependentUpon>AddBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibrarianView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrarianView.Designer.cs">
+      <DependentUpon>LibrarianView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051521481_Initiation.cs" />
+    <Compile Include="Migrations\201807051521481_Initiation.Designer.cs">
+      <DependentUpon>201807051521481_Initiation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051524138_AddedPermanentElements.cs" />
+    <Compile Include="Migrations\201807051524138_AddedPermanentElements.Designer.cs">
+      <DependentUpon>201807051524138_AddedPermanentElements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051605081_AddedAreaArbitraryStreet.cs" />
+    <Compile Include="Migrations\201807051605081_AddedAreaArbitraryStreet.Designer.cs">
+      <DependentUpon>201807051605081_AddedAreaArbitraryStreet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051622119_AddedPostCode.cs" />
+    <Compile Include="Migrations\201807051622119_AddedPostCode.Designer.cs">
+      <DependentUpon>201807051622119_AddedPostCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051622588_AddedAddress.cs" />
+    <Compile Include="Migrations\201807051622588_AddedAddress.Designer.cs">
+      <DependentUpon>201807051622588_AddedAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051724421_AddedFirstLibrarian.cs" />
+    <Compile Include="Migrations\201807051724421_AddedFirstLibrarian.Designer.cs">
+      <DependentUpon>201807051724421_AddedFirstLibrarian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807061611191_UpdatedConstraints.cs" />
+    <Compile Include="Migrations\201807061611191_UpdatedConstraints.Designer.cs">
+      <DependentUpon>201807061611191_UpdatedConstraints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807071727027_AddedRulesForFines.cs" />
+    <Compile Include="Migrations\201807071727027_AddedRulesForFines.Designer.cs">
+      <DependentUpon>201807071727027_AddedRulesForFines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807071747475_SomechangesToEnumStatus.cs" />
+    <Compile Include="Migrations\201807071747475_SomechangesToEnumStatus.Designer.cs">
+      <DependentUpon>201807071747475_SomechangesToEnumStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807071752489_ChangesInFineCalculator.cs" />
+    <Compile Include="Migrations\201807071752489_ChangesInFineCalculator.Designer.cs">
+      <DependentUpon>201807071752489_ChangesInFineCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807072145162_RestrictionForTypesAndFormats.cs" />
+    <Compile Include="Migrations\201807072145162_RestrictionForTypesAndFormats.Designer.cs">
+      <DependentUpon>201807072145162_RestrictionForTypesAndFormats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807081811042_AddedMethodToChangeStatus.cs" />
+    <Compile Include="Migrations\201807081811042_AddedMethodToChangeStatus.Designer.cs">
+      <DependentUpon>201807081811042_AddedMethodToChangeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807081923176_ChangedInAddAmountFunction.cs" />
+    <Compile Include="Migrations\201807081923176_ChangedInAddAmountFunction.Designer.cs">
+      <DependentUpon>201807081923176_ChangedInAddAmountFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807082108489_AddedRaimainingAmount.cs" />
+    <Compile Include="Migrations\201807082108489_AddedRaimainingAmount.Designer.cs">
+      <DependentUpon>201807082108489_AddedRaimainingAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\ArbitraryCode.cs" />
+    <Compile Include="Models\AreaCode.cs" />
+    <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\BorrowAble.cs" />
+    <Compile Include="Models\BorrowRecord.cs" />
+    <Compile Include="Models\DueDateValidatorAttribute.cs" />
+    <Compile Include="Models\EmailValidatorAttribute.cs" />
+    <Compile Include="Models\FivePlusAttribute.cs" />
+    <Compile Include="Models\Format.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\ISBNValidatorAttribute.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\Librarian.cs" />
+    <Compile Include="Models\LibraryDB.cs" />
+    <Compile Include="Models\LoginValidatorAttribute.cs" />
+    <Compile Include="Models\MustExistBeforeValidatorAttribute.cs" />
+    <Compile Include="Models\MustHasThreeCharactersAttribute.cs" />
+    <Compile Include="Models\MustHasTwoCharactersAttribute.cs" />
+    <Compile Include="Models\NameValidatorAttribute.cs" />
+    <Compile Include="Models\NonBorrowAble.cs" />
+    <Compile Include="Models\PasswordValidatorAttribute.cs" />
+    <Compile Include="Models\Patron.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\PostCode.cs" />
+    <Compile Include="Models\Publisher.cs" />
+    <Compile Include="Models\ReservationRecord.cs" />
+    <Compile Include="Models\Street.cs" />
+    <Compile Include="Models\TelValidatorAttribute.cs" />
+    <Compile Include="Models\Title.cs" />
+    <Compile Include="Models\TodayDateValidatorAttribute.cs" />
+    <Compile Include="Models\Type.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterUserForm.Designer.cs">
+      <DependentUpon>RegisterUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterLibrarianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterLibrarianForm.Designer.cs">
+      <DependentUpon>RegisterLibrarianForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserView.Designer.cs">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddBookForm.resx">
+      <DependentUpon>AddBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrarianView.resx">
+      <DependentUpon>LibrarianView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051521481_Initiation.resx">
+      <DependentUpon>201807051521481_Initiation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051524138_AddedPermanentElements.resx">
+      <DependentUpon>201807051524138_AddedPermanentElements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051605081_AddedAreaArbitraryStreet.resx">
+      <DependentUpon>201807051605081_AddedAreaArbitraryStreet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051622119_AddedPostCode.resx">
+      <DependentUpon>201807051622119_AddedPostCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051622588_AddedAddress.resx">
+      <DependentUpon>201807051622588_AddedAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051724421_AddedFirstLibrarian.resx">
+      <DependentUpon>201807051724421_AddedFirstLibrarian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807061611191_UpdatedConstraints.resx">
+      <DependentUpon>201807061611191_UpdatedConstraints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807071727027_AddedRulesForFines.resx">
+      <DependentUpon>201807071727027_AddedRulesForFines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807071747475_SomechangesToEnumStatus.resx">
+      <DependentUpon>201807071747475_SomechangesToEnumStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807071752489_ChangesInFineCalculator.resx">
+      <DependentUpon>201807071752489_ChangesInFineCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807072145162_RestrictionForTypesAndFormats.resx">
+      <DependentUpon>201807072145162_RestrictionForTypesAndFormats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807081811042_AddedMethodToChangeStatus.resx">
+      <DependentUpon>201807081811042_AddedMethodToChangeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807081923176_ChangedInAddAmountFunction.resx">
+      <DependentUpon>201807081923176_ChangedInAddAmountFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807082108489_AddedRaimainingAmount.resx">
+      <DependentUpon>201807082108489_AddedRaimainingAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterUserForm.resx">
+      <DependentUpon>RegisterUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterLibrarianForm.resx">
+      <DependentUpon>RegisterLibrarianForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserView.resx">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
